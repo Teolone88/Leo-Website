@@ -9,9 +9,8 @@ npm install
 npm run dev
 ```
 
-Production build:
+The files to upload are in `dist/`. Upload the contents of that folder (the `index.html` inside it, plus `assets/` and `favicon.svg`) to the web root. Paths are relative, so the folder can sit at the site root or in a subdirectory.
 
 ```bash
 npm run build
-npm run preview
 ```
