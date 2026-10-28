@@ -8,7 +8,7 @@
       name="description"
       content="Leo Engine and Leo Studio are shipping. Leo Workbench is in progress. Graphics products from Local Expedition Organizer OÜ."
     />
-    <meta name="theme-color" content="#090a08" />
+    <meta name="theme-color" content="#fff6df" />
     <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
     <script type="application/ld+json">
       {
@@ -57,10 +57,6 @@
 
     <main id="content">
       <section class="hero" id="top" aria-label="Leo">
-        <canvas class="hero-canvas" id="hero-canvas" aria-hidden="true"></canvas>
-        <div class="hero-shade" aria-hidden="true"></div>
-        <p class="readout" id="readout">Starting the field…</p>
-        <p class="edge-label">Jump flood · signed distance</p>
         <div class="wrap hero-copy">
           <p class="kicker">Graphics · Local Expedition Organizer</p>
           <h1>Leo</h1>
@@ -121,21 +117,10 @@
               <p class="section-kicker">01 · Renderer</p>
               <h2>Leo Engine</h2>
             </div>
-            <div>
-              <p class="section-copy">
-                The picture can be a field. Seed it, jump-flood the nearest stroke, read the distance.
-                2.5D is that relief, not a stack of boxes. Scenes arrive ready: FlatBuffers, vector graphics, and state machines.
-              </p>
-              <div class="plate" id="engine-plate">
-                <canvas id="engine-canvas" aria-hidden="true"></canvas>
-                <div class="hud" role="group" aria-label="Pipeline view">
-                  <button type="button" data-pipeline="cpu" aria-pressed="false">CPU</button>
-                  <button type="button" data-pipeline="compute" aria-pressed="true">Compute</button>
-                  <button type="button" data-pipeline="raster" aria-pressed="false">Raster</button>
-                </div>
-              </div>
-              <p class="caption" id="engine-caption"></p>
-            </div>
+            <p class="section-copy">
+              The picture can be a field. Seed it, jump-flood the nearest stroke, read the distance.
+              2.5D is that relief, not a stack of boxes. Scenes arrive ready: FlatBuffers, vector graphics, and state machines.
+            </p>
           </div>
 
           <div class="spec-plate">
@@ -200,14 +185,9 @@
                 <p class="gpu-note">Needs WebGPU. It will not run in an old browser, an outdated version, or on some phones and tablets.</p>
               </div>
             </div>
-            <div>
-              <div class="plate">
-                <canvas id="studio-canvas" aria-hidden="true"></canvas>
-              </div>
-              <p class="caption" id="studio-note">
-                Raster samples on one side of the sweep. Vector strokes on the other. Native GPU-accelerated raster-to-SVG, for real-world images turned into vectors.
-              </p>
-            </div>
+            <p class="section-copy">
+              Raster becomes vector on the GPU: a native, custom raster-to-SVG path for real-world images.
+            </p>
           </div>
           <div class="stance">
             <p>Feels like Figma</p>
