@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Leo — Engine, Studio, Workbench</title>
+    <meta
+      name="description"
+      content="Leo Engine and Leo Studio are shipping. Leo Workbench is in progress. Graphics products from Local Expedition Organizer OÜ."
+    />
+    <meta name="theme-color" content="#090a08" />
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Local Expedition Organizer OÜ",
+        "url": "https://leoapp.eu",
+        "email": "support@leoapp.eu",
+        "identifier": "17490066",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Tartu mnt 67/1-13b",
+          "addressLocality": "Tallinn",
+          "addressRegion": "Harju maakond, Kesklinna linnaosa",
+          "postalCode": "10115"
+        },
+        "sameAs": [
+          "https://www.linkedin.com/company/local-expedition-organizer/",
+          "https://www.youtube.com/@LeoApp-l4v",
+          "https://www.instagram.com/leoapp.eu/",
+          "https://leoapp.eu"
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <a class="skip" href="#content">Skip to content</a>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="#top">
+          <strong>Leo</strong>
+          <span>Local Expedition Organizer</span>
+        </a>
+        <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav">
+          Menu
+        </button>
+        <nav class="nav" id="nav" aria-label="Sections">
+          <a href="#engine">Engine</a>
+          <a href="#studio">Studio</a>
+          <a href="#workbench">Workbench</a>
+          <a href="#company">Company</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="content">
+      <section class="hero" id="top" aria-label="Leo">
+        <canvas class="hero-canvas" id="hero-canvas" aria-hidden="true"></canvas>
+        <div class="hero-shade" aria-hidden="true"></div>
+        <p class="readout" id="readout">Starting the field…</p>
+        <p class="edge-label">Jump flood · signed distance</p>
+        <div class="wrap hero-copy">
+          <p class="kicker">Graphics · Local Expedition Organizer</p>
+          <h1>Leo</h1>
+          <p class="lede">Extremely fast 2D. 2.5D from jump flooding and signed distance.</p>
+          <ul class="hero-status">
+            <li><a href="#engine"><strong>Engine</strong> · Shipping</a></li>
+            <li><a href="#studio"><strong>Studio</strong> · Shipping</a></li>
+            <li><a href="#workbench"><strong>Workbench</strong> · In progress</a></li>
+          </ul>
+        </div>
+      </section>
+
+      <div class="ticker" aria-hidden="true">
+        <div class="ticker-track">
+          <div class="ticker-set">
+            <span>SVG 2</span>
+            <span>Chromium SVG</span>
+            <span>Jump flood</span>
+            <span>Signed distance</span>
+            <span>CPU</span>
+            <span>Compute shaders</span>
+            <span>Vertex / fragment</span>
+            <span>FlatBuffers</span>
+            <span>State machines</span>
+            <span>Luau</span>
+            <span>LuaJIT</span>
+            <span>Raster to SVG</span>
+          </div>
+          <div class="ticker-set">
+            <span>SVG 2</span>
+            <span>Chromium SVG</span>
+            <span>Jump flood</span>
+            <span>Signed distance</span>
+            <span>CPU</span>
+            <span>Compute shaders</span>
+            <span>Vertex / fragment</span>
+            <span>FlatBuffers</span>
+            <span>State machines</span>
+            <span>Luau</span>
+            <span>LuaJIT</span>
+            <span>Raster to SVG</span>
+          </div>
+        </div>
+      </div>
+      <p class="sr-only">
+        Specifications include SVG 2, Chromium SVG, jump flood, signed distance, CPU, compute shaders, vertex and fragment, FlatBuffers, state machines, Luau, LuaJIT, and raster to SVG.
+      </p>
+
+      <section class="section" id="engine">
+        <div class="wrap">
+          <div class="section-head">
+            <div>
+              <p class="status"><i aria-hidden="true"></i> Shipping</p>
+              <p class="section-kicker">01 · Renderer</p>
+              <h2>Leo Engine</h2>
+            </div>
+            <div>
+              <p class="section-copy">
+                The picture can be a field. Seed it, jump-flood the nearest stroke, read the distance.
+                2.5D is that relief, not a stack of boxes. Scenes arrive ready: FlatBuffers, vector graphics, and state machines.
+              </p>
+              <div class="plate" id="engine-plate">
+                <canvas id="engine-canvas" aria-hidden="true"></canvas>
+                <div class="hud" role="group" aria-label="Pipeline view">
+                  <button type="button" data-pipeline="cpu" aria-pressed="false">CPU</button>
+                  <button type="button" data-pipeline="compute" aria-pressed="true">Compute</button>
+                  <button type="button" data-pipeline="raster" aria-pressed="false">Raster</button>
+                </div>
+              </div>
+              <p class="caption" id="engine-caption"></p>
+            </div>
+          </div>
+
+          <div class="spec-plate">
+            <article>
+              <span class="idx">Device 01</span>
+              <h3>CPU</h3>
+              <p>The field evaluated on the processor.</p>
+            </article>
+            <article>
+              <span class="idx">Device 02</span>
+              <h3>GPU compute shaders</h3>
+              <p>A second device for the same scenes, run as compute.</p>
+            </article>
+            <article>
+              <span class="idx">Device 03</span>
+              <h3>Vertex / fragment</h3>
+              <p>A standard GPU pipeline. Coverage, then the stroke.</p>
+            </article>
+            <article>
+              <span class="idx">Scene</span>
+              <h3>FlatBuffer scenes</h3>
+              <p>Ready-to-go scene data, not a proprietary detour.</p>
+            </article>
+            <article>
+              <span class="idx">Scene</span>
+              <h3>Vector graphics</h3>
+              <p>Strokes and fills as the picture, not a bake.</p>
+            </article>
+            <article>
+              <span class="idx">Scene</span>
+              <h3>State machines</h3>
+              <p>Behavior that ships with the scene.</p>
+            </article>
+            <article>
+              <span class="idx">Script · Web</span>
+              <h3>Luau</h3>
+              <p>Scripting on the web.</p>
+            </article>
+            <article>
+              <span class="idx">Script · Desktop</span>
+              <h3>LuaJIT</h3>
+              <p>Scripting on desktop.</p>
+            </article>
+            <article>
+              <span class="idx">Standard</span>
+              <h3>SVG 2</h3>
+              <p>SVG compliant with SVG 2 and Chromium.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section studio" id="studio">
+        <div class="wrap">
+          <div class="section-head">
+            <div>
+              <p class="status"><i aria-hidden="true"></i> Shipping</p>
+              <p class="section-kicker">02 · Drawing</p>
+              <h2>Leo Studio</h2>
+            </div>
+            <div>
+              <div class="plate">
+                <canvas id="studio-canvas" aria-hidden="true"></canvas>
+              </div>
+              <p class="caption" id="studio-note">
+                Raster samples on one side of the sweep. Vector strokes on the other. Native GPU-accelerated raster-to-SVG, for real-world images turned into vectors.
+              </p>
+            </div>
+          </div>
+          <div class="stance">
+            <p>Feels like Figma</p>
+            <p>Animates like Rive</p>
+            <p>As competent as Adobe</p>
+            <p>Low-code like Unreal</p>
+          </div>
+          <p class="section-copy studio-note">
+            An AI assistant acts as a studio navigation steward. It helps you move through the tool.
+            The studio itself carries a timeline, rigging, shaders, brushes, and animation.
+          </p>
+          <div class="tool-index">
+            <div><span class="idx">01</span><strong>Timeline</strong></div>
+            <div><span class="idx">02</span><strong>Rigging</strong></div>
+            <div><span class="idx">03</span><strong>Shaders</strong></div>
+            <div><span class="idx">04</span><strong>Brushes</strong></div>
+            <div><span class="idx">05</span><strong>Animation</strong></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section workbench" id="workbench">
+        <div class="wrap workbench-layout">
+          <div>
+            <p class="status status-wait"><i aria-hidden="true"></i> In progress · not shipping</p>
+            <p class="section-kicker">03 · Pipeline</p>
+            <h2>Leo Workbench</h2>
+            <p class="section-copy">
+              The workflow and export pipeline is still being built. This is not a release, a beta, or a download.
+            </p>
+            <ul class="pipeline">
+              <li><span>01</span> Custom compilation</li>
+              <li><span>02</span> Code generation</li>
+              <li><span>03</span> Data-source management for HMI / SCADA</li>
+              <li><span>04</span> Modern PLC readings</li>
+              <li><span>05</span> Cloud data and local integrations</li>
+            </ul>
+            <p class="note">Questions go to the same desk as the rest of Leo.</p>
+            <a class="text-link" href="mailto:support@leoapp.eu?subject=Leo%20Workbench">support@leoapp.eu</a>
+          </div>
+          <aside class="stamp" aria-label="Release status">
+            <strong>In progress</strong>
+            <span>Not shipping</span>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section company" id="company">
+        <div class="wrap company-grid">
+          <div>
+            <p class="section-kicker">04 · Entity</p>
+            <h2>Local Expedition Organizer OÜ</h2>
+            <p>
+              Same entity as <a href="https://leoapp.eu">leoapp.eu</a>. L.E.O. there is the tabletop campaign app.
+              This page is the graphics line: Leo Engine, Leo Studio, and Leo Workbench.
+            </p>
+            <p>
+              The legal name, address, registry code, and D-U-N-S below are the ones published in the
+              <a href="https://leoapp.eu/privacy.html">leoapp.eu privacy policy</a>.
+            </p>
+          </div>
+          <aside class="nameplate">
+            <h3>Nameplate</h3>
+            <dl>
+              <dt>Entity</dt>
+              <dd>Local Expedition Organizer OÜ</dd>
+              <dt>Address</dt>
+              <dd>Harju maakond, Tallinn, Kesklinna linnaosa, Tartu mnt 67/1-13b, 10115</dd>
+              <dt>Registry</dt>
+              <dd>17490066</dd>
+              <dt>D-U-N-S</dt>
+              <dd>988009565</dd>
+              <dt>Email</dt>
+              <dd><a href="mailto:support@leoapp.eu">support@leoapp.eu</a></dd>
+              <dt>Register</dt>
+              <dd>
+                <a href="https://ariregister.rik.ee/eng/company/17490066" rel="noopener noreferrer" target="_blank">Estonian e-Business Register</a>
+              </dd>
+            </dl>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap">
+        <div class="footer-row">
+          <p>© 2026 L.E.O. All rights reserved.</p>
+          <p>Local Expedition Organizer OÜ</p>
+        </div>
+        <ul class="footer-links">
+          <li><a href="https://leoapp.eu">leoapp.eu</a></li>
+          <li><a href="https://leoapp.eu/privacy.html">Privacy</a></li>
+          <li><a href="https://leoapp.eu/terms.html">Terms</a></li>
+          <li><a href="https://leoapp.eu/refund.html">Refunds</a></li>
+          <li><a href="https://leoapp.eu/pledge.html">Pledge</a></li>
+          <li><a href="https://www.linkedin.com/company/local-expedition-organizer/" rel="noopener noreferrer" target="_blank">LinkedIn</a></li>
+          <li><a href="https://www.youtube.com/@LeoApp-l4v" rel="noopener noreferrer" target="_blank">YouTube</a></li>
+          <li><a href="https://www.instagram.com/leoapp.eu/" rel="noopener noreferrer" target="_blank">Instagram</a></li>
+          <li><a href="https://discord.gg/GGcQz9Ne" rel="noopener noreferrer" target="_blank">Discord</a></li>
+          <li><a href="mailto:support@leoapp.eu">support@leoapp.eu</a></li>
+        </ul>
+        <p class="legal-copy">
+          Harju maakond, Tallinn, Kesklinna linnaosa, Tartu mnt 67/1-13b, 10115 · Registry code 17490066 · D-U-N-S 988009565
+        </p>
+      </div>
+    </footer>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
