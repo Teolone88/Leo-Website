@@ -173,6 +173,10 @@ textarea {
   color: var(--signal);
 }
 
+.nav a.open-link {
+  color: var(--signal);
+}
+
 .nav-toggle {
   display: none;
   background: transparent;
@@ -571,6 +575,92 @@ h1 {
   border-right: 0;
 }
 
+.hero-open {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.85rem 1.2rem;
+  margin-top: 1.35rem;
+}
+
+.open-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--signal);
+  color: var(--signal-ink);
+  text-decoration: none;
+  font-family: var(--mono);
+  font-size: 0.74rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 0.9rem 1.05rem;
+  border: 1px solid var(--signal);
+}
+
+.open-btn:hover {
+  background: #edff8a;
+  color: var(--signal-ink);
+}
+
+.gpu-note {
+  margin: 0;
+  max-width: 34rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+html[data-webgpu="missing"] .gpu-note,
+html[data-webgpu="no-adapter"] .gpu-note {
+  color: #ffc2ad;
+}
+
+.showcase-block {
+  margin-top: 1.8rem;
+}
+
+.showcase {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 1rem;
+  border: 1px solid var(--line);
+}
+
+.showcase a {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding: 0.95rem 1rem 1.05rem;
+  text-decoration: none;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  color: var(--ink);
+}
+
+.showcase a:nth-child(4n) {
+  border-right: 0;
+}
+
+.showcase a:nth-last-child(-n + 3) {
+  border-bottom: 0;
+}
+
+.showcase strong {
+  font-family: var(--display);
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+}
+
+.showcase a:hover {
+  background: var(--signal);
+  color: var(--signal-ink);
+}
+
+.showcase a:hover .idx {
+  color: var(--signal-ink);
+}
+
 .tool-index strong {
   display: block;
   margin-top: 0.35rem;
@@ -769,6 +859,26 @@ h1 {
   .spec-plate,
   .tool-index {
     grid-template-columns: 1fr;
+  }
+
+  .showcase {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .showcase a,
+  .showcase a:nth-child(4n),
+  .showcase a:nth-last-child(-n + 3) {
+    border-right: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+
+  .showcase a:nth-child(2n) {
+    border-right: 0;
+  }
+
+  .showcase a:last-child {
+    border-right: 0;
+    border-bottom: 0;
   }
 
   .spec-plate article,
